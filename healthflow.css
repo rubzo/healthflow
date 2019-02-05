@@ -1,12 +1,35 @@
 html, body {
+  position: absolute;
   background: black;
   height: 100%;
+  width: 100%;
   padding: 0;
   margin: 0;
+  overflow: hidden;
 }
 
 div {
   box-sizing: border-box;
+}
+
+.page {
+  background: black;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.side-page {
+  background: black;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  overflow: hidden;
 }
 
 .text {
@@ -52,14 +75,14 @@ div {
   color: white;
 }
 
-.visible {
-  height: 100%;
-  display: block;
+.stage-left {
+  transform: translate(-100%, 0);
+  transition: 1s ease-in-out;
 }
 
-.hidden {
-  height: 0%;
-  display: none;
+.stage-reset {
+  transform: translate(0%, 0);
+  transition: 1s ease-in-out;
 }
 
 .title-box {
@@ -74,8 +97,8 @@ div {
 }
 
 input[type=text] {
-    width: 50%;
-    font-size: 2em;
-    text-align: center;
-    display: inline-block;
-  }
+  width: 50%;
+  font-size: 2em;
+  text-align: center;
+  display: inline-block;
+}

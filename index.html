@@ -6,7 +6,7 @@
 </head>
 
 <body>
-    <div class="visible" id="page-1">
+    <div class="page" id="title-page" style="z-index: 10;">
         <div class="title-box">
             <div class="text text-large">
                 HealthFlow
@@ -31,7 +31,7 @@
             <div class="option">
                 <div class="text text-regular">Gout</div>
             </div>
-            <div class="option" id="goto-page-2">
+            <div class="option" id="goto-unconc-page">
                 <div class="text text-regular">Hypoglycemia</div>
             </div>
             <div class="option">
@@ -40,7 +40,7 @@
         </div>
     </div>
 
-    <div class="hidden" id="page-2">
+    <div class="page" id="unconc-page" style="z-index: 9;">
         <div class="title-box">
             <div class="text text-large">
                 Is the person unconscious?
@@ -50,13 +50,13 @@
             <div class="option">
                 <div class="text text-large">Yes</div>
             </div>
-            <div class="option" id="goto-page-3">
+            <div class="option" id="goto-sympt-page">
                 <div class="text text-large">No</div>
             </div>
         </div>
     </div>
 
-    <div class="hidden" id="page-3">
+    <div class="page" id="sympt-page" style="z-index: 8;">
         <div class="title-box">
             <div class="text text-regular">
                 How many of these symptoms do they have?
@@ -103,14 +103,14 @@
                 <div class="text text-regular">Dizziness</div>
             </div>
         </div>
-        <div class="title-box title-button" id="goto-page-4">
+        <div class="title-box title-button" id="goto-measure-page">
             <div class="text text-large">
                 Finished selecting?
             </div>
         </div>
     </div>
 
-    <div class="hidden" id="page-4">
+    <div class="page" id="measure-page" style="z-index: 7;">
         <div class="title-box">
             <div class="text text-large">
                 Can you confirm their blood glucose?
@@ -122,18 +122,18 @@
                 It's <input type="text" maxlength=4></input>mmol/L
                 </form>
             </div>
-            <div class="text text-regular white" id="goto-page-5">
-                How do I measure?
+            <div class="text text-regular white" id="goto-measure-help-page">
+                How do I measure this?
             </div>
         </div>
-        <div class="title-box title-button" id="goto-page-6">
+        <div class="title-box title-button" id="goto-sugar-page">
             <div class="text text-large">
                 Done
             </div>
         </div>
     </div>
 
-    <div class="hidden" id="page-5">
+    <div class="side-page" id="measure-help-page" style="z-index: 20;">
         <div class="title-box">
             <div class="text text-large">
                 How do I measure blood glucose?
@@ -144,65 +144,62 @@
                 Use this device...
             </div>
         </div>
-        <div class="title-box title-button" id="goto-page-4-2">
+        <div class="title-box title-button" id="goback-measure-page">
             <div class="text text-large">
                 Go back...
             </div>
         </div>
     </div>
 
-    <div class="hidden" id="page-6">
+    <div class="page" id="sugar-page" style="z-index: 5;">
         <div class="title-box">
             <div class="text text-large">
                 Give the person fast sugar.
             </div>
         </div>
         <div class="list-box" style="height: 60%">
-            <div class="text text-large white" id="goto-page-7">
+            <div class="text text-large white" id="goto-sugar-help-page">
                 What is fast sugar?
             </div>
         </div>
         <div class="title-box title-button">
-            <div class="text text-large" id="goto-page-8">
+            <div class="text text-large" id="goto-wait-page">
                 OK
             </div>
         </div>
     </div>
 
-    <div class="hidden" id="page-7">
+    <div class="side-page" id="sugar-help-page" style="z-index: 20;">
         <div class="title-box">
             <div class="text text-large">
                 Kinds of Fast Sugar
             </div>
         </div>
         <div class="list-box scroll" style="height: 60%">
-            <div class="option" id="xxx">
+            <div class="option">
                 <div class="text text-regular">15g of glucose tablets</div>
             </div>
-            <div class="option" id="xxx">
+            <div class="option">
                 <div class="text text-regular">3 teaspoons or packets of sugar dissolved in water</div>
             </div>
-            <div class="option" id="xxx">
+            <div class="option">
                 <div class="text text-regular">150ml of juice or soft drink</div>
             </div>
-            <div class="option" id="xxx">
+            <div class="option">
                 <div class="text text-regular">6 lifesavers</div>
             </div>
-            <div class="option" id="xxx">
+            <div class="option">
                 <div class="text text-regular">1 tablespoon of honey</div>
-            </div>
-            <div class="option" id="xxx">
-                <div class="text text-regular">A tiny piece of tablet</div>
             </div>
         </div>
         <div class="title-box title-button">
-            <div class="text text-large" id="goto-page-6-2">
+            <div class="text text-large" id="goback-sugar-page">
                 Go back...
             </div>
         </div>
     </div>
 
-    <div class="hidden" id="page-8">
+    <div class="page" id="wait-page" style="z-index: 3;">
         <div class="title-box">
             <div class="text text-large">
                 Now wait 15 minutes
@@ -214,13 +211,13 @@
             </div>
         </div>
         <div class="title-box title-button">
-            <div class="text text-large" id="goto-page-9">
+            <div class="text text-large" id="goto-final-page">
                 15 minutes have passed!
             </div>
         </div>
     </div>
 
-    <div class="hidden" id="page-9">
+    <div class="page" id="final-page" style="z-index: 2;">
         <div class="title-box">
             <div class="text text-large">
                 The person is now stable
@@ -232,7 +229,7 @@
             </div>
         </div>
         <div class="title-box title-button">
-            <div class="text text-large" id="goto-page-1">
+            <div class="text text-large" id="goto-title-page">
                 Finish
             </div>
         </div>

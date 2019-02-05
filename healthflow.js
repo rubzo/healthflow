@@ -1,60 +1,68 @@
-let div_ids_to_preload = [
-    "page-1",
-    "page-2",
-    "page-3",
-    "page-4",
-    "page-5",
-    "page-6",
-    "page-7",
-    "page-8",
-    "page-9",
-    "goto-page-2",
-    "goto-page-3",
-    "goto-page-4",
-    "goto-page-5",
-    "goto-page-6",
-    "goto-page-4-2",
-    "goto-page-7",
-    "goto-page-6-2",
-    "goto-page-8",
-    "goto-page-9",
-    "goto-page-1",
-];
-let ds = {};
+let divs = {};
 let current_page = null;
+let divs_slid_left = [];
+let div_slid_in = null;
 
-function preload_divs() {
-    div_ids_to_preload.forEach(function (n) {
-        ds[n] = document.getElementById(n);
-    });
-    current_page = ds["page-1"];
+function div(n) {
+    if (!(n in divs)) {
+        divs[n] = document.getElementById(n);
+    }
+    return divs[n];
 }
 
-function switch_to(to) {
-    current_page.classList.remove("visible");
-    current_page.classList.add("hidden");
-    to.classList.remove("hidden");
-    to.classList.add("visible");
+function slide_left(to) {
+    current_page.classList.add("stage-left");
+    divs_slid_left.push(current_page);
     current_page = to;
 }
 
-function link(from, to) {
-    from.addEventListener("click", function () { switch_to(to); });
+function slide_in(to) {
+    to.classList.add("stage-left");
+    div_slid_in = to;
+}
+
+function slide_away(to) {
+    div_slid_in.classList.add("stage-reset");
+    setTimeout(function () {
+        div_slid_in.classList.remove("stage-left");
+        div_slid_in.classList.remove("stage-reset");
+        div_slid_in = null;
+    }, 1000);
+}
+
+function reset_all(to) {
+    divs_slid_left.forEach(function (n) {
+        n.classList.add("stage-reset");
+    });
+    setTimeout(function () {
+        divs_slid_left.forEach(function (n) {
+            n.classList.remove("stage-left");
+            n.classList.remove("stage-reset");
+        });
+        current_page = to;
+        divs_slid_left = [];
+    }, 1000);
+}
+
+function link(from, to, switch_func) {
+    div(from).addEventListener("click", function () { switch_func(div(to)); });
 }
 
 function initial_setup() {
-    preload_divs();
-    link(ds["goto-page-2"], ds["page-2"]);
-    link(ds["goto-page-3"], ds["page-3"]);
-    link(ds["goto-page-4"], ds["page-4"]);
-    link(ds["goto-page-5"], ds["page-5"]);
-    link(ds["goto-page-6"], ds["page-6"]);
-    link(ds["goto-page-7"], ds["page-7"]);
-    link(ds["goto-page-8"], ds["page-8"]);
-    link(ds["goto-page-9"], ds["page-9"]);
-    link(ds["goto-page-1"], ds["page-1"]);
-    link(ds["goto-page-4-2"], ds["page-4"]);
-    link(ds["goto-page-6-2"], ds["page-6"]);
+    current_page = div("title-page");
+    link("goto-unconc-page", "unconc-page", slide_left);
+    link("goto-sympt-page", "sympt-page", slide_left);
+    link("goto-measure-page", "measure-page", slide_left);
+    link("goto-sugar-page", "sugar-page", slide_left);
+    link("goto-wait-page", "wait-page", slide_left);
+    link("goto-final-page", "final-page", slide_left);
+    link("goto-title-page", "title-page", reset_all);
+
+    link("goto-measure-help-page", "measure-help-page", slide_in);
+    link("goback-measure-page", "measure-page", slide_away);
+
+    link("goto-sugar-help-page", "sugar-help-page", slide_in);
+    link("goback-sugar-page", "sugar-page", slide_away);
 };
 
 window.onload = initial_setup;
