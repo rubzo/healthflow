@@ -1,0 +1,81 @@
+html, body {
+  background: black;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+.text {
+  text-align: center;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: sans-serif;
+}
+
+.text-large {
+  font-size: 6em;
+}
+
+.text-regular {
+  font-size: 4em;
+}
+
+.scroll {
+    overflow-y: scroll;
+}
+
+.white {
+  background: black;
+  color: white;
+}
+
+.option {
+  height: 22%;
+  background: black;
+  color: white;
+}
+
+.select-option {
+  height: 22%;
+  background: #121817;
+  color: white;
+}
+
+.title-button {
+  height: 22%;
+  background: gray;
+  color: white;
+}
+
+.visible {
+  height: 100%;
+  display: block;
+}
+
+.hidden {
+  height: 0%;
+  display: none;
+}
+
+.title-box {
+  height: 20%;
+  background: grey;
+  color: white;
+  padding: 1em;
+}
+
+.list-box {
+  height: 80%;
+}
+
+input[type=text] {
+    width: 50%;
+    font-size: 2em;
+    text-align: center;
+    display: inline-block;
+  }

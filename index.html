@@ -1,0 +1,244 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="healthflow.css">
+</head>
+
+<body>
+    <div class="visible" id="page-1">
+        <div class="title-box">
+            <div class="text text-large">
+                HealthFlow
+            </div>
+        </div>
+        <div class="list-box scroll">
+            <div class="option">
+                <div class="text text-regular">Arthritis</div>
+            </div>
+            <div class="option">
+                <div class="text text-regular">Bulimia</div>
+            </div>
+            <div class="option">
+                <div class="text text-regular">Conjunctivitis</div>
+            </div>
+            <div class="option">
+                <div class="text text-regular">Epilepsy</div>
+            </div>
+            <div class="option">
+                <div class="text text-regular">Flu</div>
+            </div>
+            <div class="option">
+                <div class="text text-regular">Gout</div>
+            </div>
+            <div class="option" id="goto-page-2">
+                <div class="text text-regular">Hypoglycemia</div>
+            </div>
+            <div class="option">
+                <div class="text text-regular">Insomnia</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="hidden" id="page-2">
+        <div class="title-box">
+            <div class="text text-large">
+                Is the person unconscious?
+            </div>
+        </div>
+        <div class="list-box">
+            <div class="option">
+                <div class="text text-large">Yes</div>
+            </div>
+            <div class="option" id="goto-page-3">
+                <div class="text text-large">No</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="hidden" id="page-3">
+        <div class="title-box">
+            <div class="text text-regular">
+                How many of these symptoms do they have?
+            </div>
+        </div>
+        <div class="list-box scroll" style="height: 60%;">
+            <div class="select-option">
+                <div class="text text-regular">Trembling</div>
+            </div>
+            <div class="select-option">
+                <div class="text text-regular">Palpitations</div>
+            </div>
+            <div class="select-option">
+                <div class="text text-regular">Sweating</div>
+            </div>
+            <div class="select-option">
+                <div class="text text-regular">Anxiety</div>
+            </div>
+            <div class="select-option">
+                <div class="text text-regular">Hunger</div>
+            </div>
+            <div class="select-option">
+                <div class="text text-regular">Nausea</div>
+            </div>
+            <div class="select-option">
+                <div class="text text-regular">Difficulty Concentrating</div>
+            </div>
+            <div class="select-option">
+                <div class="text text-regular">Confusion</div>
+            </div>
+            <div class="select-option">
+                <div class="text text-regular">Weakness</div>
+            </div>
+            <div class="select-option">
+                <div class="text text-regular">Drowsiness</div>
+            </div>
+            <div class="select-option">
+                <div class="text text-regular">Vision Changes</div>
+            </div>
+            <div class="select-option">
+                <div class="text text-regular">Difficulty Speaking</div>
+            </div>
+            <div class="select-option">
+                <div class="text text-regular">Dizziness</div>
+            </div>
+        </div>
+        <div class="title-box title-button" id="goto-page-4">
+            <div class="text text-large">
+                Finished selecting?
+            </div>
+        </div>
+    </div>
+
+    <div class="hidden" id="page-4">
+        <div class="title-box">
+            <div class="text text-large">
+                Can you confirm their blood glucose?
+            </div>
+        </div>
+        <div class="list-box" style="height: 60%">
+            <div class="text text-large white">
+                <form>
+                It's <input type="text" maxlength=4></input>mmol/L
+                </form>
+            </div>
+            <div class="text text-regular white" id="goto-page-5">
+                How do I measure?
+            </div>
+        </div>
+        <div class="title-box title-button" id="goto-page-6">
+            <div class="text text-large">
+                Done
+            </div>
+        </div>
+    </div>
+
+    <div class="hidden" id="page-5">
+        <div class="title-box">
+            <div class="text text-large">
+                How do I measure blood glucose?
+            </div>
+        </div>
+        <div class="list-box" style="height: 60%">
+            <div class="text text-large white">
+                Use this device...
+            </div>
+        </div>
+        <div class="title-box title-button" id="goto-page-4-2">
+            <div class="text text-large">
+                Go back...
+            </div>
+        </div>
+    </div>
+
+    <div class="hidden" id="page-6">
+        <div class="title-box">
+            <div class="text text-large">
+                Give the person fast sugar.
+            </div>
+        </div>
+        <div class="list-box" style="height: 60%">
+            <div class="text text-large white" id="goto-page-7">
+                What is fast sugar?
+            </div>
+        </div>
+        <div class="title-box title-button">
+            <div class="text text-large" id="goto-page-8">
+                OK
+            </div>
+        </div>
+    </div>
+
+    <div class="hidden" id="page-7">
+        <div class="title-box">
+            <div class="text text-large">
+                Kinds of Fast Sugar
+            </div>
+        </div>
+        <div class="list-box scroll" style="height: 60%">
+            <div class="option" id="xxx">
+                <div class="text text-regular">15g of glucose tablets</div>
+            </div>
+            <div class="option" id="xxx">
+                <div class="text text-regular">3 teaspoons or packets of sugar dissolved in water</div>
+            </div>
+            <div class="option" id="xxx">
+                <div class="text text-regular">150ml of juice or soft drink</div>
+            </div>
+            <div class="option" id="xxx">
+                <div class="text text-regular">6 lifesavers</div>
+            </div>
+            <div class="option" id="xxx">
+                <div class="text text-regular">1 tablespoon of honey</div>
+            </div>
+            <div class="option" id="xxx">
+                <div class="text text-regular">A tiny piece of tablet</div>
+            </div>
+        </div>
+        <div class="title-box title-button">
+            <div class="text text-large" id="goto-page-6-2">
+                Go back...
+            </div>
+        </div>
+    </div>
+
+    <div class="hidden" id="page-8">
+        <div class="title-box">
+            <div class="text text-large">
+                Now wait 15 minutes
+            </div>
+        </div>
+        <div class="list-box" style="height: 60%">
+            <div class="text text-large white">
+                An alert will let you know when this time has passed!
+            </div>
+        </div>
+        <div class="title-box title-button">
+            <div class="text text-large" id="goto-page-9">
+                15 minutes have passed!
+            </div>
+        </div>
+    </div>
+
+    <div class="hidden" id="page-9">
+        <div class="title-box">
+            <div class="text text-large">
+                The person is now stable
+            </div>
+        </div>
+        <div class="list-box" style="height: 60%">
+            <div class="text text-large white">
+                Eat the usual meal due at this time of day, or a snack with at least 15g of carbs.
+            </div>
+        </div>
+        <div class="title-box title-button">
+            <div class="text text-large" id="goto-page-1">
+                Finish
+            </div>
+        </div>
+    </div>
+
+    <script src="healthflow.js"> </script>
+</body>
+
+</html>
