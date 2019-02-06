@@ -16,6 +16,13 @@ function slide_left(to) {
     current_page = to;
 }
 
+function slide_left_and_wait(to) {
+    slide_left(to);
+    setTimeout(function() {
+        div("goto-measure2-page").classList.remove("text-hidden");
+    }, 5000);
+}
+
 function slide_in(to) {
     to.classList.add("stage-left");
     div_slid_in = to;
@@ -54,7 +61,7 @@ function initial_setup() {
     link("goto-sympt-page", "sympt-page", slide_left);
     link("goto-measure-page", "measure-page", slide_left);
     link("goto-sugar-page", "sugar-page", slide_left);
-    link("goto-wait-page", "wait-page", slide_left);
+    link("goto-wait-page", "wait-page", slide_left_and_wait);
     link("goto-measure2-page", "measure2-page", slide_left);
     link("goto-final-page", "final-page", slide_left);
     link("goto-title-page", "title-page", reset_all);
