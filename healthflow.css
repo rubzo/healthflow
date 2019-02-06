@@ -104,6 +104,12 @@ div {
   height: 80%;
 }
 
+.help-box {
+  background: grey;
+  border: 10px solid grey;
+  border-radius: 15px;
+}
+
 input[type=text] {
   width: 50%;
   font-size: 2em;
