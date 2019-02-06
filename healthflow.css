@@ -1,6 +1,6 @@
 html, body {
   position: absolute;
-  background: black;
+  background: #1d7ca7;
   height: 100%;
   width: 100%;
   padding: 0;
@@ -13,7 +13,7 @@ div {
 }
 
 .page {
-  background: black;
+  background: #1d7ca7;
   height: 100%;
   width: 100%;
   position: absolute;
@@ -23,7 +23,7 @@ div {
 }
 
 .side-page {
-  background: black;
+  background: #1d7ca7;
   height: 100%;
   width: 100%;
   position: absolute;
@@ -49,7 +49,7 @@ div {
 }
 
 .text-hidden {
-  color: gray;
+  color: #2d8db8;
 }
 
 .scroll {
@@ -57,29 +57,29 @@ div {
 }
 
 .white {
-  background: black;
+  background: #1d7ca7;
   color: white;
 }
 
 .option {
   height: 22%;
-  background: black;
+  background: #1d7ca7;
   color: white;
 }
 
 .select-option {
   height: 22%;
-  background: #121817;
+  background: #1d7ca7;
   color: white;
 }
 
 .selected {
-  background: green;
+  background: #2fa4d9;
 }
 
 .title-button {
   height: 22%;
-  background: gray;
+  background: #2d8db8;
   color: white;
 }
 
@@ -95,7 +95,7 @@ div {
 
 .title-box {
   height: 20%;
-  background: grey;
+  background: #2d8db8;
   color: white;
   padding: 1em;
 }
@@ -105,8 +105,8 @@ div {
 }
 
 .help-box {
-  background: grey;
-  border: 10px solid grey;
+  background: #1c9cd6;
+  border: 10px solid #1c9cd6;
   border-radius: 15px;
 }
 
