@@ -211,13 +211,54 @@
             </div>
         </div>
         <div class="title-box title-button">
-            <div class="text text-large" id="goto-final-page">
+            <div class="text text-large text-hidden" id="goto-measure2-page">
                 15 minutes have passed!
             </div>
         </div>
     </div>
 
-    <div class="page" id="final-page" style="z-index: 2;">
+    <div class="page" id="measure2-page" style="z-index: 2;">
+        <div class="title-box">
+            <div class="text text-large">
+                Can you confirm their blood glucose?
+            </div>
+        </div>
+        <div class="list-box" style="height: 60%">
+            <div class="text text-large white">
+                <form>
+                It's <input type="text" maxlength=4></input>mmol/L
+                </form>
+            </div>
+            <div class="text text-regular white" id="goto-measure2-help-page">
+                How do I measure this?
+            </div>
+        </div>
+        <div class="title-box title-button" id="goto-final-page">
+            <div class="text text-large">
+                Done
+            </div>
+        </div>
+    </div>
+
+    <div class="side-page" id="measure2-help-page" style="z-index: 20;">
+        <div class="title-box">
+            <div class="text text-large">
+                How do I measure blood glucose?
+            </div>
+        </div>
+        <div class="list-box" style="height: 60%">
+            <div class="text text-large white">
+                Use this device...
+            </div>
+        </div>
+        <div class="title-box title-button" id="goback-measure2-page">
+            <div class="text text-large">
+                Go back...
+            </div>
+        </div>
+    </div>
+
+    <div class="page" id="final-page" style="z-index: 1;">
         <div class="title-box">
             <div class="text text-large">
                 The person is now stable

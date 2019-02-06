@@ -48,6 +48,10 @@ div {
   font-size: 4em;
 }
 
+.text-hidden {
+  color: gray;
+}
+
 .scroll {
     overflow-y: scroll;
 }
@@ -67,6 +71,10 @@ div {
   height: 22%;
   background: #121817;
   color: white;
+}
+
+.selected {
+  background: green;
 }
 
 .title-button {

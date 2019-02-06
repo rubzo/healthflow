@@ -55,6 +55,7 @@ function initial_setup() {
     link("goto-measure-page", "measure-page", slide_left);
     link("goto-sugar-page", "sugar-page", slide_left);
     link("goto-wait-page", "wait-page", slide_left);
+    link("goto-measure2-page", "measure2-page", slide_left);
     link("goto-final-page", "final-page", slide_left);
     link("goto-title-page", "title-page", reset_all);
 
@@ -63,6 +64,26 @@ function initial_setup() {
 
     link("goto-sugar-help-page", "sugar-help-page", slide_in);
     link("goback-sugar-page", "sugar-page", slide_away);
+
+    link("goto-measure2-help-page", "measure2-help-page", slide_in);
+    link("goback-measure2-page", "measure2-page", slide_away);
+
+    var node_list = Array.from(document.getElementsByClassName("select-option"));
+    node_list.forEach(function(n) {
+        n.addEventListener("click", function(ev) { 
+
+	    let el = ev.target;
+	    while (!el.classList.contains("select-option")) {
+	      el = el.parentNode;
+	    }
+
+	    if (!el.classList.contains("selected")) {
+	        el.classList.add("selected");
+	    } else {
+	        el.classList.remove("selected");
+	    }
+	});
+    });
 };
 
 window.onload = initial_setup;
